@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'As a visitor' do
-  describe 'When I select Gryffindor from the select field and click search' do
+  describe 'When I select Gryffindor from the select field and click search', :vcr do
     before(:each) do
       visit '/'
       select "Gryffindor", :from => "house"
