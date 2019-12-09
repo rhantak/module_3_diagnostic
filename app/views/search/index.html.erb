@@ -1,0 +1,17 @@
+<h1 class = "title"><%= params[:house] %> Members in the Order of the Phoenix</h1>
+<% @members.each do |member| %>
+  <section class = "member">
+    <p class = "name">
+      Name: <%= member.name %>
+    </p>
+    <p class = "role">
+      <%= "Role: #{member.role}" if member.role %>
+    </p>
+    <p class = "house">
+      House: <%= member.house %>
+    </p>
+    <p class = "patronus">
+      <%= "Patronus: #{member.patronus}" if member.patronus %>
+    </p>
+  </section>
+<% end %>
