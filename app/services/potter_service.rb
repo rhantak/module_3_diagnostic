@@ -1,6 +1,6 @@
 class PotterService
   def get_house_members(house)
-    response = fetch_data("/characters?house=#{house}")
+    response = fetch_data("characters?house=#{house}&orderOfThePhoenix=true")
     parse_data(response)
   end
 
