@@ -16,7 +16,7 @@ describe 'As a visitor' do
     end
 
     it "I see 21 members on the list" do
-      expect(".member", count: 21)
+      expect(page).to have_css(".member", count: 21)
     end
 
     xit "Each member has name, role, house, and patronus if they exist" do
