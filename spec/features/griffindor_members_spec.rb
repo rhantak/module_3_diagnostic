@@ -4,12 +4,15 @@ describe 'As a visitor' do
   describe 'When I select Gryffindor from the select field and click search' do
     before(:each) do
       visit '/'
-      find("option[value='Gryffindor']").click
+      select "Gryffindor", :from => "house"
       click_button 'Search For Members'
     end
 
     it "my current path is /search" do
       expect(current_path).to eq('/search')
+      within(".title") do
+        expect(page).to have_content("Gryffindor")
+      end
     end
 
     xit "I see 21 members on the list" do
