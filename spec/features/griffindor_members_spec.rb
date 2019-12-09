@@ -19,7 +19,7 @@ describe 'As a visitor' do
       expect(page).to have_css(".member", count: 21)
     end
 
-    xit "Each member has name, role, house, and patronus if they exist" do
+    it "Each member has name, role, house, and patronus if they exist" do
       within (first(".member")) do
         expect(page).to have_css(".name")
         expect(page).to have_css(".role")
