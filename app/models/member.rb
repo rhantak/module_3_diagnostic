@@ -1,6 +1,6 @@
 class Member
+  attr_reader :name, :role, :house, :patronus
   def initialize(member_data)
-    binding.pry
     @name = member_data[:name]
     @role = member_data[:role]
     @house = member_data[:house]
