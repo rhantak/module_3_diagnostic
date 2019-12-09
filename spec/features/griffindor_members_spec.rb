@@ -15,7 +15,7 @@ describe 'As a visitor' do
       end
     end
 
-    xit "I see 21 members on the list" do
+    it "I see 21 members on the list" do
       expect(".member", count: 21)
     end
 
